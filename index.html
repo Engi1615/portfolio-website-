@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sajan - Portfolio</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Sajan</div>
+      <button class="toggle-btn" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="vanta-bg" id="home">
+    <div class="home-content">
+      <h1 class="animated-text" id="welcomeText">Welcome to My Portfolio</h1>
+      <p class="animated-text" id="introText">Hi, I'm Sajan.</p>
+      <p class="animated-text role-line">I am a <span id="skillText"></span><span class="typing-cursor">|</span></p>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-container">
+      <!-- Left: Summary -->
+      <div class="about-text">
+        <h3>Hi, I'm Sajan Kumar 👋</h3>
+        <p>
+          I'm a dedicated and detail-oriented Full-Stack Web Developer with a strong foundation in frontend and backend
+          technologies. I am currently pursuing a B.Tech in Computer Science from NIMS University, where I have
+          developed a deep interest in creating efficient, scalable, and user-friendly web applications.
+        </p>
+        <p>
+          My tech stack includes Python, JavaScript, React, Tailwind CSS, Django, and the MERN stack. I also have
+          hands-on experience with AWS and MySQL. I enjoy solving real-world problems through code and am always eager
+          to learn and grow.
+        </p>
+      </div>
+
+      <!-- Right: SVG Avatar -->
+      <div class="about-avatar">
+        <img src="assets/Avatar/avatar.svg" alt="Developer Avatar" />
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-container">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <img src="assets/icons/project1.svg" alt="Project 1" class="project-image" />
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio website built using HTML, CSS, JavaScript, and Vanta.js for interactive background.
+          </p>
+          <a href="www.google.com" class="project-btn" target="_blank">🔗 Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <img src="assets/icons/project2.svg" alt="Project 2" class="project-image" />
+        <div class="project-content">
+          <h3>Weather App</h3>
+          <p>A real-time weather forecast app using OpenWeatherMap API, HTML, CSS, and JavaScript.</p>
+          <a href="www.google.com" class="project-btn" target="_blank">🔗 Live Demo</a>
+        </div>
+      </div>
+
+      <!-- Add more project cards similarly -->
+    </div>
+  </section>
+
+
+  <section class="skills-section" id="skills">
+    <div class="skills-container">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <img src="assets/icons/python-original.svg" alt="Python" />
+          <p>Python</p>
+        </div>
+        <div class="skill-card">
+          <img src=" assets/icons/html5-original.svg" alt="HTML" />
+          <p>HTML</p>
+        </div>
+        <div class="skill-card">
+          <img src=" assets/icons/css3-original.svg" alt="CSS" />
+          <p>CSS</p>
+        </div>
+        <div class="skill-card">
+          <img src=" assets/icons/javascript-original.svg" alt="JavaScript" />
+          <p>JavaScript</p>
+        </div>
+        <div class="skill-card">
+          <img src=" assets/icons/react-original.svg" alt="React" />
+          <p>React</p>
+        </div>
+        <div class="skill-card">
+          <img src=" assets/icons/Tailwind CSS.svg" alt="Tailwind CSS" />
+          <p>Tailwind CSS</p>
+        </div>
+        <div class="skill-card">
+          <img src=" assets/icons/bootstrap-original.svg" alt="Bootstrap" />
+          <p>Bootstrap</p>
+        </div>
+        <div class="skill-card">
+          <img src=" assets/icons/django-plain.svg" alt="Django" />
+          <p>Django</p>
+        </div>
+        <div class="skill-card">
+          <img src="assets/icons/mongodb-original.svg" alt="MERN" />
+          <p>MERN</p>
+        </div>
+        <div class="skill-card">
+          <img src=" assets/icons/AWS.svg" alt="AWS" />
+          <p>AWS</p>
+        </div>
+        <div class="skill-card">
+          <img src=" assets/icons/mysql-original.svg" alt="MySQL" />
+          <p>MySQL</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Have a question or want to work together? Fill out the form below.</p>
+
+      <form id="contactForm" action="https://formspree.io/f/xeozpjea" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Your name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" required placeholder="your@email.com" />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Type your message here..."></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+        <div id="form-message" class="form-message"></div>
+
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-logo">Sajan</div>
+
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="footer-socials">
+          <a href="https://github.com/Engi1615" target="_blank" aria-label="GitHub">
+            <img src="assets/icons/github-icon.svg" alt="GitHub" />
+          </a>
+          <a href="https://www.linkedin.com/in/sajan-kumar-48a197321/" target="_blank" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin-app-icon.svg" alt="LinkedIn" />
+          </a>
+          <a href="mailto:kr.sajan1615@gmail.com" aria-label="Email">
+            <img src="assets/icons/gmail-icon.svg" alt="Email" />
+          </a>
+        </div>
+      </div>
+
+      <p class="footer-copy">© 2025 Sajan. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
